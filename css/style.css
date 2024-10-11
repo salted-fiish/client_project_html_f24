@@ -1,0 +1,115 @@
+/* Style for the body of the webpage */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;  /* Light gray background */
+    color: #333;  /* Dark text for good contrast */
+    line-height: 1.6;  /* Increased line-height for readability */
+    margin: 20px;
+}
+
+/* Headings styling */
+h1 {
+    font-size: 2.5rem;  /* Large font size for the main heading */
+    font-family: 'Roboto', sans-serif;  /* A modern font for emphasis */
+    color: #0C2C56;  /* UM Brand blue */
+    text-align: center;  /* Center the main heading */
+    margin-top: 0;
+}
+
+h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #023764;  /* Slightly lighter blue for subheadings */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 1.5em;
+    line-height: 1.75;
+}
+
+/* Image styling */
+img {
+    border: 5px solid #333;  /* Dark border around images */
+    padding: 10px;  /* Padding inside the border */
+    margin: 20px 0;  /* Space around the image */
+    border-top-right-radius: 30px;  /* Rounded top-right corner */
+    max-width: 100%;  /* Ensure images don't overflow their container */
+}
+
+/* Links styling */
+a {
+    color: #0366d6;  /* UM Brand link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists styling */
+ul, ol {
+    margin-left: 50px;
+    padding-left: 0;
+}
+
+ul li, ol li {
+    display: inline-block;  /* Inline-block for list items */
+    margin-left: 15px;  /* Space between list items */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #023764;  /* UM Brand footer link color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #FFCB05;  /* Light background color (light gray-blue) */
+    color: #00274C;  /* Dark font color for readability */
+    font-family: Arial, sans-serif;  /* Set a default font family */
+    line-height: 1.6;  /* Increase line height for better readability */
+    margin: 0;  /* Remove default margin */
+    padding: 20px;  /* Add some padding around the page content */
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+  }
+  
+  /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
+  .skip {
+    position: relative;
+    width: 100%;
+  }
+  
+  .skip a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 100;
+  }
+  
+  /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
+  .skip a:focus {
+    top: 20px;
+    outline: none;
+  }
