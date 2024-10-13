@@ -1,84 +1,80 @@
-/* Basic reset and box-sizing for better sizing */
 *, *:before, *:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic body styling */
 body {
     font-family: 'Arial', sans-serif;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
     padding: 5%;
-    font-size: 16px; /* Good base size for mobile, scales up well */
+    font-size: 16px;
 }
 
-/* Header styling using grid */
 header {
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    background: #00274C;
-    color: white;
-    padding: 20px 0;
+    background-color: #00274C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
 }
 
 header img {
     max-width: 100%;
     height: auto;
-    grid-row: 1;
 }
 
-header nav {
-    width: 100%;
-    grid-row: 2;
-}
-
-/* Navigation styling */
 nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-nav ul li {
-    margin: 10px;
+    list-style-type: none;
+    padding: 0;
 }
 
 nav a {
     color: #FFCB05;
     text-decoration: none;
-    font-size: 1.2em; /* Larger touch targets */
+    display: block;
+    padding: 10px;
 }
 
-/* Main content styling using grid */
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
-    margin-top: 20px;
-    background: #FFF;
+    background-color: #fff;
     padding: 20px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Section and articles using grid */
-section, article {
-    display: grid;
-    grid-gap: 10px;
+main h1, main h2 {
+    color: #00274C;
 }
 
-/* Footer styling */
+section {
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+}
+
 footer {
+    background-color: #00274C;
+    color: #FFFFFF;
     text-align: center;
     padding: 10px;
-    background: #00274C;
-    color: white;
-    font-size: 0.8em;
+    font-size: 14px;
 }
 
-/* Accessibility Skip Link */
+footer a {
+    color: #FFCB05;
+}
+
 .skip a {
     position: absolute;
     left: -9999px;
@@ -89,21 +85,42 @@ footer {
 }
 
 .skip a:focus {
-    position: absolute;
-    left: 5px;
-    top: 5px;
+    position: static;
+    left: auto;
     width: auto;
     height: auto;
-    padding: 10px;
+    overflow: visible;
     background: #FFCB05;
     color: #00274C;
-    text-decoration: none;
-    z-index: 100;
+    padding: 10px;
+    text-align: center;
 }
 
-/* Grid adjustments for responsive images */
-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+/* Services Section Styling */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Makes the grid responsive */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the entire services section */
+    align-items: center; /* Aligns items vertically */
+    justify-items: center; /* Centers items horizontally in their cells */
+}
+
+.service {
+    display: flex;
+    flex-direction: column; /* Stacks the icon and text vertically */
+    align-items: center; /* Centers the items horizontally */
+    text-align: center; /* Ensures text is centered under the icon */
+}
+
+.service img {
+    width: 50px; /* Set a fixed size for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the icon and the label */
+}
+
+.service h2 {
+    font-size: 14px; /* Smaller font size for labels */
+    color: #333; /* Dark grey color for text */
+    margin: 0; /* Removes default margin for consistency */
 }
