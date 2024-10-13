@@ -93,23 +93,23 @@ body {
 
 nav a:hover, nav a:focus {
     text-decoration: underline;
-  }
+}
   
-  /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-  .skip {
-    position: relative;
-    width: 100%;
-  }
-  
-  .skip a {
+.skip {
     position: absolute;
-    top: -40px;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus, .skip:focus-within {
     left: 0;
-    z-index: 100;
-  }
-  
-  /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-  .skip a:focus {
-    top: 20px;
-    outline: none;
-  }
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 1000;
+    background: white;
+}
