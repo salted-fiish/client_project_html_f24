@@ -1,115 +1,109 @@
-/* Style for the body of the webpage */
+/* Basic reset and box-sizing for better sizing */
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;  /* Light gray background */
-    color: #333;  /* Dark text for good contrast */
-    line-height: 1.6;  /* Increased line-height for readability */
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 5%;
+    font-size: 16px; /* Good base size for mobile, scales up well */
 }
 
-/* Headings styling */
-h1 {
-    font-size: 2.5rem;  /* Large font size for the main heading */
-    font-family: 'Roboto', sans-serif;  /* A modern font for emphasis */
-    color: #0C2C56;  /* UM Brand blue */
-    text-align: center;  /* Center the main heading */
-    margin-top: 0;
+/* Header styling using grid */
+header {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    background: #00274C;
+    color: white;
+    padding: 20px 0;
 }
 
-h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    color: #023764;  /* Slightly lighter blue for subheadings */
-    margin-bottom: 10px;
+header img {
+    max-width: 100%;
+    height: auto;
+    grid-row: 1;
 }
 
-h2 {
-    font-size: 2rem;
+header nav {
+    width: 100%;
+    grid-row: 2;
 }
 
-h3 {
-    font-size: 1.5rem;
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    text-align: center;
 }
 
-/* Paragraph styling */
-p {
-    margin-bottom: 1.5em;
-    line-height: 1.75;
+nav ul li {
+    margin: 10px;
 }
 
-/* Image styling */
-img {
-    border: 5px solid #333;  /* Dark border around images */
-    padding: 10px;  /* Padding inside the border */
-    margin: 20px 0;  /* Space around the image */
-    border-top-right-radius: 30px;  /* Rounded top-right corner */
-    max-width: 100%;  /* Ensure images don't overflow their container */
-}
-
-/* Links styling */
-a {
-    color: #0366d6;  /* UM Brand link color */
+nav a {
+    color: #FFCB05;
     text-decoration: none;
+    font-size: 1.2em; /* Larger touch targets */
 }
 
-a:hover {
-    text-decoration: underline;
+/* Main content styling using grid */
+main {
+    margin-top: 20px;
+    background: #FFF;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
 }
 
-/* Lists styling */
-ul, ol {
-    margin-left: 50px;
-    padding-left: 0;
-}
-
-ul li, ol li {
-    display: inline-block;  /* Inline-block for list items */
-    margin-left: 15px;  /* Space between list items */
+/* Section and articles using grid */
+section, article {
+    display: grid;
+    grid-gap: 10px;
 }
 
 /* Footer styling */
 footer {
-    margin-top: 40px;
     text-align: center;
-    font-size: 0.9rem;
+    padding: 10px;
+    background: #00274C;
+    color: white;
+    font-size: 0.8em;
 }
 
-footer a {
-    color: #023764;  /* UM Brand footer link color */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-body {
-    background-color: #FFCB05;  /* Light background color (light gray-blue) */
-    color: #00274C;  /* Dark font color for readability */
-    font-family: Arial, sans-serif;  /* Set a default font family */
-    line-height: 1.6;  /* Increase line height for better readability */
-    margin: 0;  /* Remove default margin */
-    padding: 20px;  /* Add some padding around the page content */
-}
-
-nav a:hover, nav a:focus {
-    text-decoration: underline;
-}
-  
-.skip {
+/* Accessibility Skip Link */
+.skip a {
     position: absolute;
-    left: -10000px;
+    left: -9999px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
 }
 
-.skip:focus, .skip:focus-within {
-    left: 0;
-    top: 0;
+.skip a:focus {
+    position: absolute;
+    left: 5px;
+    top: 5px;
     width: auto;
     height: auto;
-    overflow: visible;
-    z-index: 1000;
-    background: white;
+    padding: 10px;
+    background: #FFCB05;
+    color: #00274C;
+    text-decoration: none;
+    z-index: 100;
+}
+
+/* Grid adjustments for responsive images */
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
