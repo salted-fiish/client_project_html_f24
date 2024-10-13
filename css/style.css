@@ -96,31 +96,34 @@ footer a {
     text-align: center;
 }
 
-/* Services Section Styling */
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Makes the grid responsive */
-    gap: 20px; /* Space between grid items */
-    padding: 20px; /* Padding around the entire services section */
-    align-items: center; /* Aligns items vertically */
-    justify-items: center; /* Centers items horizontally in their cells */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
 }
 
 .service {
     display: flex;
-    flex-direction: column; /* Stacks the icon and text vertically */
-    align-items: center; /* Centers the items horizontally */
-    text-align: center; /* Ensures text is centered under the icon */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .service img {
-    width: 50px; /* Set a fixed size for icons */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space between the icon and the label */
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .service h2 {
-    font-size: 14px; /* Smaller font size for labels */
-    color: #333; /* Dark grey color for text */
-    margin: 0; /* Removes default margin for consistency */
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: underline;
 }
