@@ -9,18 +9,17 @@
 </head>
 <body>
     <header>
-        <div class="skip"><a href="#main">Skip to Main Content</a></div>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <a class="skip" href="#main">Skip to Main Content</a>
         <nav>
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="logo">
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "CAPS.html">CAPS</a></li>
-                <li><a href = "CEW+.html">CEW+</a></li>
-                <li><a href = "Food-pantry.html">Food pantry</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="CAPS.html" class="active">CAPS</a></li>
+                <li><a href="CEW+.html">CEW+</a></li>
+                <li><a href="Food-pantry.html">Food pantry</a></li>
             </ul>
         </nav>
         <h1>Student Success Portal</h1>
-
     </header>
 
     
@@ -75,7 +74,12 @@
     </main>
 
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>&copy; <span id="current-year"></span> MSI Academic Advising | 
+           <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a>
+        </p>
     </footer>
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
